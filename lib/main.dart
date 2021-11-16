@@ -25,7 +25,7 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int indexTop = 0;
-  double valueBottom = 20;
+  double valueBottom = 65;
   double value = 20;
   double value2 = 30;
   @override
@@ -99,17 +99,41 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             buildSliderSideLabel(),
-            const SizedBox(height: 16),
+            const SizedBox(height: 30),
+            //volumeSlider(),
           ],
         ),
       ],
     ),
   );
 
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  // TODO : make a volume button
+  // Widget volumeSlider(){
+  //   return Container(
+  //         child: Padding(
+  //           padding: EdgeInsets.all(10.0),
+  //           child: ListView(
+  //             children: <Widget>[
+  //               FlutterVolumeSlider(
+  //                 display: Display.HORIZONTAL,
+  //                 sliderActiveColor: Colors.blue,
+  //                 sliderInActiveColor: Colors.grey,
+  //               ),
+  //             ],
+  //           ),
+  //         ),
+  //       );
+  // }
+
   Widget buildSliderSideLabel() {
     final double min = 20;
     final double max = 90;
-    final divisions = 20;
+    final divisions = 70;
 
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 20),
@@ -122,6 +146,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               min: min,
               max: max,
               divisions: divisions,
+              activeColor: Colors.blue,
+              inactiveColor: Colors.blue.shade100,
               label: valueBottom.round().toString(),
               onChanged: (value) => setState(() => this.valueBottom = value),
             ),
@@ -138,5 +164,4 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
     ),
   );
-
 }

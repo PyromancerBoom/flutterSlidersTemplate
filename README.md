@@ -1,18 +1,19 @@
-# Basic template of flutter sliders
+# Sliders App
+This is an isolated app in flutter to implement the Slider widget of flutter.
 
+Here's an app I made for the Slider widget of Flutter for Hacktoberfest 2021.
+There are various types of sliders in the app.
 
+![Alt Text](Animation.gif )
 
-A new Flutter project.
+## Usage
 
-## Getting Started
+Run main.dart in an android emulator.
 
-This project is a starting point for a Flutter application.
+## Contributing
 
-A few resources to get you started if this is your first Flutter project:
+I welcome and encourage all pull requests towards improving the app or adding new features.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+For major changes, please open an issue first to discuss what you would like to change.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Feel free to use my code :)
